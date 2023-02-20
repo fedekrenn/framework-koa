@@ -71,7 +71,7 @@ async function getProducts(cartId) {
 
   getProductsContainer.innerHTML = ''
 
-  data.productos.forEach((product) => {
+  data.forEach((product) => {
     const productCard = document.createElement('tr')
     productCard.innerHTML = `
             <td>${product.id}</td>
@@ -81,6 +81,7 @@ async function getProducts(cartId) {
             <td>${product.stock}</td>
             <td><img src="${product.foto}" alt="${product.nombre}" width="100px"></td>
             <td>${product.timestamp}</td>
+            <td>${product.categoria}</td>
             <td>${product.descripcion}</td>
         `
     getProductsContainer.appendChild(productCard)

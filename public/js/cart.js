@@ -77,7 +77,7 @@ async function getProducts(cartId) {
     })
   }
 
-  return data.productos
+  return data
 }
 
 async function deleteProductFromCart(productId) {

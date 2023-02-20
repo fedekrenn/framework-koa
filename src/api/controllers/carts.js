@@ -10,7 +10,7 @@ const createCart = async (ctx) => {
 }
 
 const addProductToCart = async (ctx) => {
-  const { cartId, productId } = ctx.params
+  const { id: cartId, productId } = ctx.params
 
   const product = await handleProducts.getById(productId)
 
@@ -40,7 +40,7 @@ const deleteCart = async (ctx) => {
 }
 
 const deleteProductFromCart = async (ctx) => {
-  const { cartId, productId } = ctx.params
+  const { id: cartId, productId } = ctx.params
 
   const result = await handleCarts.deleteProductFromCart(cartId, productId)
   ctx.body = result
